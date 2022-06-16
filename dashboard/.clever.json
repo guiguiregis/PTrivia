@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "app_id": "app_043158c1-9e8c-4b7a-877e-474134522c73",
+      "org_id": "user_d2d959ec-a62f-4f7c-b5ce-4fc2e0e65f00",
+      "deploy_url": "https://push-n2-par-clevercloud-customers.services.clever-cloud.com/app_043158c1-9e8c-4b7a-877e-474134522c73.git",
+      "name": "pooptriviaadmin",
+      "alias": "pooptriviaadmin"
+    }
+  ]
+}

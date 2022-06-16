@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)https://labs.phaser.io/100.html?src=src\scalemanager\fit%20with%20auto%20center.js -->
+<html style="height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Poop Trivia</title>
+    <script src="./vendors/phaser.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./assets/pt_logo.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="./vendors/labs.css">
+    
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            background-color: #fff;
+            font-family: 'Mont';
+        }
+        body::before {
+            content: "";
+            background-image: url('./assets/pt_logo.png');
+            background-size:70px;
+            background-origin: padding-box;
+            background-repeat: repeat;
+            opacity: 0.15;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            }
+        canvas {
+            background-color: #000000;
+            position: relative;
+        }
+
+         
+        @font-face {
+            font-family: 'Mont';
+            src: url(./assets/fonts/Montserrat-Regular.ttf);
+        }
+           
+        @font-face {
+            font-family: 'Montb';
+            src: url(./assets/fonts/Montserrat-Bold.ttf);
+        }
+
+        #turn{
+            position:fixed;
+            width:100%;
+            height:100%;
+            top:0px;
+            left:0px;
+            background-color:gainsboro;
+            background-repeat:no-repeat;
+            background-position: center center;
+            background-size:contain;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 1;
+            /* display:none; */
+        }
+
+        @media screen and (orientation:landscape)
+        {
+            #turn
+            {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+
+<body style="height: 100%;">
+
+<div id="turn"> 
+    <img src="./assets/playlandscape.png" style="width: 200px; height: auto;" alt="" srcset=""> 
+    <span style="font-family:  Mont, sans-serif; font-size: 21px;">Mettre en paysage</span>
+</div>
+
+
+<div id="game" style="overflow: hidden; width: 100%; height: 100%;">
+    <img id="loader" src="./assets/loader.jpg" 
+    style="position: absolute; top: 45%; left: 45%; width: 70px; z-index: 0;" alt="">
+    
+</div>
+
+
+
+<script src="./scripts/data/data.js"></script>
+<script src="./scripts/localization/localization.js"></script>
+
+<script src="./scripts/scenes/splashScene.js"    ></script>
+<script src="./scripts/scenes/homeScene.js"      ></script>
+<script src="./scripts/scenes/tutoScene.js"      ></script>
+<script src="./scripts/scenes/selectionScene.js" ></script>
+<script src="./scripts/scenes/gameScene.js"      ></script>
+<script src="./scripts/scenes/quizScene.js"      ></script>
+<script src="./scripts/scenes/recapScene.js"     ></script>
+<script src="./scripts/scenes/gameoverScene.js"  ></script>
+<script src="./scripts/scenes/sanitizeScene.js"  ></script>
+<script src="./scripts/scenes/difficultyScene.js"></script>
+<script src="./scripts/scenes/wordImageScene.js" ></script>
+<script src="./scripts/scenes/fortuneWcScene.js" ></script>
+<script id="gameScript" src="./scripts/game.js"  ></script>
+
+<script>
+   
+    var scripts =  document.getElementsByTagName('script');
+    var torefreshs = [
+        "scripts/data/data.js", 
+        "scripts/localization/localization.js",
+        "scripts/scenes/splashScene.js"    ,
+        "scripts/scenes/homeScene.js"    ,
+        "scripts/scenes/tutoScene.js"    ,
+        "scripts/scenes/selectionScene.js" ,
+        "scripts/scenes/gameScene.js"      ,
+        "scripts/scenes/quizScene.js"      ,
+        "scripts/scenes/recapScene.js"     ,
+        "scripts/scenes/gameoverScene.js"  ,
+        "scripts/scenes/sanitizeScene.js"  ,
+        "scripts/scenes/difficultyScene.js",
+        "scripts/scenes/wordImageScene.js" ,
+        "scripts/scenes/fortuneWcScene.js" ,
+        "scripts/game.js" 
+    ] ; // list of js to be refresh
+
+    // console.log(scripts)
+    var key = new Date().getTime(); // change this key every time you want force a refresh
+    for(var i=0;i<scripts.length;i++){
+    
+    for(var j=0;j<torefreshs.length;j++){ 
+        var jItem = torefreshs[j];
+        var fullPath = window.location.href + jItem;
+        // console.log(fullPath)
+        if(scripts[i].src && (scripts[i].src.indexOf(fullPath) > -1)){
+            new_src = scripts[i].src.replace(torefreshs[j],torefreshs[j] + 'k=' + key );
+            scripts[i].src = new_src; // change src in order to refresh js
+
+            // console.log("replaced !")
+        } 
+    }
+    }
+
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5QMQYMC2V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F5QMQYMC2V');
+</script>
+</body></html>

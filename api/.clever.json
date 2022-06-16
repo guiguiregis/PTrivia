@@ -1,0 +1,18 @@
+{
+  "apps": [
+    {
+      "app_id": "app_8b589426-3c9b-4aca-a019-6ba4bdce11b7",
+      "org_id": "user_d2d959ec-a62f-4f7c-b5ce-4fc2e0e65f00",
+      "deploy_url": "https://push-n2-par-clevercloud-customers.services.clever-cloud.com/app_8b589426-3c9b-4aca-a019-6ba4bdce11b7.git",
+      "name": "application",
+      "alias": "application"
+    },
+    {
+      "app_id": "app_99fe77b7-b784-4ec7-ad64-a910b9bd4e05",
+      "org_id": "user_d2d959ec-a62f-4f7c-b5ce-4fc2e0e65f00",
+      "deploy_url": "https://push-n2-par-clevercloud-customers.services.clever-cloud.com/app_99fe77b7-b784-4ec7-ad64-a910b9bd4e05.git",
+      "name": "pooptrivia_api",
+      "alias": "pooptrivia_api"
+    }
+  ]
+}

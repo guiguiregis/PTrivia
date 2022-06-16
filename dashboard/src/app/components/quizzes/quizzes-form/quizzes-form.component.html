@@ -1,0 +1,68 @@
+ 
+<form name="form">
+  <div class="row">
+    <div class="col">
+      Question EN: <textarea class="form-control" placeholder="" name="question_en" id="question_en" [(ngModel)]="question_en" ></textarea>
+    </div>
+    <div class="col">
+      Question FR: <textarea class="form-control" placeholder="" name="question_fr" id="question_fr" [(ngModel)]="question_fr" ></textarea>
+    </div>
+
+    <div>
+   
+      <div class="row">
+        <div class="col">
+          <strong> Answer 1 EN:</strong> (Correct) <input type="text" class="form-control" placeholder="" name="answer1_en" id="answer1_en" [(ngModel)]="answer1_en" >
+        </div>
+        <div class="col">
+          <strong> Answer 1 FR:</strong> (Correct) <input type="text" class="form-control" placeholder="" name="answer1_fr" id="answer1_fr" [(ngModel)]="answer1_fr" >
+        </div>
+      </div>
+
+   
+      <div class="row">
+        <div class="col">
+          <strong> Answer 2 EN:</strong> <input type="text" class="form-control" placeholder="" name="answer2_en" id="answer2_en" [(ngModel)]="answer2_en" >
+        </div>
+        <div class="col">
+          <strong> Answer 2 FR:</strong> <input type="text" class="form-control" placeholder="" name="answer2_fr" id="answer2_fr" [(ngModel)]="answer2_fr" >
+        </div>
+      </div>
+
+   
+      <div class="row">
+        <div class="col">
+          <strong> Answer 3 EN:</strong> <input type="text" class="form-control" placeholder="" name="answer3_en" id="answer3_en" [(ngModel)]="answer3_en" >
+        </div>
+        <div class="col">
+          <strong> Answer 3 FR:</strong> <input type="text" class="form-control" placeholder="" name="answer3_fr" id="answer3_fr" [(ngModel)]="answer3_fr" >
+        </div>
+      </div>
+      
+   
+      <div class="row">
+        <div class="col">
+          <strong> Answer 4 EN:</strong> <input type="text" class="form-control" placeholder="" name="answer4_en" id="answer4_en" [(ngModel)]="answer4_en" >
+        </div>
+        <div class="col">
+          <strong> Answer 4 FR:</strong> <input type="text" class="form-control" placeholder="" name="answer4_fr" id="answer4_fr" [(ngModel)]="answer4_fr" >
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col">
+          Level: <input type="number" min="1" class="form-control" placeholder="" name="level" id="level" [(ngModel)]="level" >
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</form>
+<div class="mt-4 pt-3">
+  <input class="btn btn-primary btn-lg" type="submit" (click)="saveQuiz()"  value="Add"/>
+</div>
+<div class="mt-4 pt-2">
+  <input class="btn btn-primary btn-lg" type="submit" (click)="closeDialog()" value="Cancel" />
+</div>
